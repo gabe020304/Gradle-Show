@@ -12,6 +12,7 @@ public class DogStage {
     public static void main() {
         System.out.println("\nWelcome to the show!\n");
         displayDogOne();
+        decideWhoIsBestDog();
         displayDogTwo();
         displayDogThree();
         System.out.println("\n--------------------------------");
@@ -38,5 +39,14 @@ public class DogStage {
         nameList.add(alice);
         nameList.add(selena);
         return nameList;
+    }
+
+    public static void decideWhoIsBestDog() {
+        Dog dog = new Dog(getDogList());
+        if( dog.getName(0).equals(pierto) ) {
+            System.out.print("He is king! The best Dog ever");
+        }else {
+            System.out.print("Dangit! He is not the best dog ever!");
+        }
     }
 }
